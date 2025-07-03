@@ -72,3 +72,18 @@ for pixel in range(0, LED_COUNT):
 # The Environment
 This is where it gets a bit tricky.
 
+```bash
+ssh into the Raspberry Pi
+sudo su -
+apt-get update
+apt-get install python3.9-venv
+python -m venv ~/venv
+source ~/venv/bin/activate
+pip install RPi.GPIO neopixel-plus
+#enable the LEDs
+venv/bin/python3 plus.py 64
+# disable the LEDs
+venv/bin/python3 plus.py 0
+```
+
+Now it's just a matter of telling octoprint to enable and disable when printing.
