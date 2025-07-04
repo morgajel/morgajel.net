@@ -72,9 +72,7 @@ for pixel in range(0, LED_COUNT):
 you'll need to prep your raspberry Pi
 in your /boot/config.txt, change the following lines:
 ```
-dtparam=audio=on  -> dtparam=audio=off
-#dtparam=spi=on   -> dtparam=spi=on
-
+dtparam=audio=off  #switched from on to off
 ```
 
 
@@ -90,6 +88,7 @@ apt-get install python3.9-venv
 python -m venv ~/venv
 source ~/venv/bin/activate
 pip install RPi.GPIO neopixel-plus
+
 #enable the LEDs
 venv/bin/python3 plus.py 64
 # disable the LEDs
