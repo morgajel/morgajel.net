@@ -1,5 +1,5 @@
 ---
-title: "Adding a NeoPixel ring LED to an Octoprint webacm"
+title: "Adding a NeoPixel ring LED to an Octoprint webcam"
 date: 2023-06-05T20:41:50Z
 draft: true
 toc: false
@@ -68,6 +68,15 @@ pixels = neopixel.NeoPixel(pin=PIN, n=LED_COUNT, pixel_order=neopixel.RGB)
 for pixel in range(0, LED_COUNT):
     pixels[pixel] = (brightness,brightness,brightness)
 ```
+# The Raspberry Pi config.txt
+you'll need to prep your raspberry Pi
+in your /boot/config.txt, change the following lines:
+```
+dtparam=audio=on  -> dtparam=audio=off
+#dtparam=spi=on   -> dtparam=spi=on
+
+```
+
 
 # The Environment
 This is where it gets a bit tricky.
@@ -76,6 +85,7 @@ This is where it gets a bit tricky.
 ssh into the Raspberry Pi
 sudo su -
 apt-get update
+apt-get upgrade -y
 apt-get install python3.9-venv
 python -m venv ~/venv
 source ~/venv/bin/activate
