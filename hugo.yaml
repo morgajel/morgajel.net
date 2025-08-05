@@ -1,12 +1,12 @@
-baseURL: https://morgajel.net
+baseURL: /
 disablePathToLower: true
 languageCode: en-us
 title: Morgajel.net
+#theme: 'mainroad'
+theme: ananke
 
-theme: 'ananke'
 DefaultContentLanguage: "en"
 SectionPagesMenu: "main"
-Paginate: 10
 
 googleAnalytics: ""
 enableRobotsTXT: true
@@ -24,7 +24,99 @@ module:
   hugoVersion:
     min: "0.84.0"
 
-params:
+  
+Author:
+  name: Jesse Morgan
+  bio: I make things.
+  avatar: img/avatar.png
+
+
+Params:
+  description: Misc. Stuff
+  copyright: Jesse Morgan
+  opengraph: true
+  schema: true
+  twitter_cards: true
+  readmore: false
+  authorbox: true
+  toc: true
+  pager: true
+  post_meta:
+    - author
+    - date
+    - categories
+    - translations
+  mainSections:
+    - post
+    - blog
+    - news
+  dateformat: 2006-01-02
+  mathjax: true
+  mathjaxPath: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js
+  mathjaxConfig: TeX-AMS-MML_HTMLorMML
+  googleFontsLink: https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700
+  customCSS:
+    - css/custom.css
+  customJS:
+    - js/custom.js
+  subtitle: ""
+  highlightColor: ""
+  style:
+    vars:
+      highlightColor: "#e22d30"
+      fontFamilyPrimary: "'Open Sans', Helvetica, Arial, sans-serif"
+      fontFamilySecondary:
+        SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+        'Courier New', monospace
+  logo:
+    image: img/placeholder.png
+    title: Mainroad
+    subtitle: Just another site
+  thumbnail:
+    visibility:
+      - list
+      - post
+  sidebar:
+    home: right
+    list: left
+    single: false
+    widgets:
+      - search
+      - recent
+      - categories
+      - taglist
+      - social
+      - languages
+  widgets:
+    recent_num: 5
+    categories_counter: false
+    tags_counter: false
+    social:
+      cached: false
+      facebook: morgajel
+      twitter: morgajel
+      instagram: morgajel
+      linkedin: morgajel
+      telegram: morgajel
+      github: morgajel
+      gitlab: morgajel
+      bitbucket: morgajel
+      email: morgajel@gmail.com
+      custom:
+        - title: Youtube
+          url: https://youtube.com/user/morgajel
+          icon: youtube.svg
+          rel: noopener noreferrer
+        - title: My Home Page
+          url: https://morgajel.net
+    search:
+      cached: false
+      url: https://google.com/search
+      input:
+        name: sitesearch
+        pre: ""
+
+  
 #  text_color: ""
   author: "Morgajel"
 #  favicon: ""

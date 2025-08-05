@@ -1,16 +1,16 @@
 ---
-title: "Adding a NeoPixel ring LED to an Octoprint webcam"
-date: 2023-06-05T20:41:50Z
-draft: true
-toc: false
-comments: false
 categories:
 - sideprojects
+comments: false
+date: "2023-06-05T20:41:50Z"
+draft: true
 tags:
 - Adafruit
 - RaspberryPi
 - NeoPixel
 - 3DPrinting
+title: Adding a NeoPixel ring LED to an Octoprint webcam
+toc: false
 ---
 
 I have a webcam on my 3d printer in an enclosure, but it's really dark. Let's add a light.
