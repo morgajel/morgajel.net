@@ -28,13 +28,13 @@ body:
     attributes:
       label: Enable Comments
       options:
-        - label: Yes
+        - label: "Yes"
   - type: checkboxes
     id: enable-table-of-contents
     attributes:
       label: Enable Table of Contents
       options:
-        - label: Yes
+        - label: "Yes"
   - type: input
     id: publishing-date
     attributes:
