@@ -1,0 +1,62 @@
+name: Hugo Post
+description: Submit content for a Hugo website post.
+title: "[Post] "
+body:
+  - type: input
+    id: article-title
+    attributes:
+      label: Title
+      description: The title of the article.
+    validations:
+      required: true
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Categories
+      multiple: true
+      options:
+        - Hobbies
+        - Linux
+        - Open Source
+        - Personal
+        - Projects
+        - Tech
+        - Work
+        - Uncategorized
+  - type: checkboxes
+    id: enable-comments
+    attributes:
+      label: Enable Comments
+      options:
+        - label: Yes
+  - type: checkboxes
+    id: enable-table-of-contents
+    attributes:
+      label: Enable Table of Contents
+      options:
+        - label: Yes
+  - type: input
+    id: publishing-date
+    attributes:
+      label: Publishing Date
+      description: Optional. Use YYYY-MM-DD. GitHub issue forms do not provide a date picker.
+      placeholder: YYYY-MM-DD
+    validations:
+      required: false
+  - type: dropdown
+    id: tags
+    attributes:
+      label: Tags
+      multiple: true
+      options:
+        - 3DPrinting
+        - AI
+        - Development
+        - Stories
+  - type: textarea
+    id: article
+    attributes:
+      label: Article
+      description: Write the article in Markdown.
+    validations:
+      required: true
