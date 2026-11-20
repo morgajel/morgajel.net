@@ -1,14 +1,6 @@
 name: Hugo Post
 description: Submit content for a Hugo website post.
-title: "[Post] "
 body:
-  - type: input
-    id: article-title
-    attributes:
-      label: Title
-      description: The title of the article.
-    validations:
-      required: true
   - type: dropdown
     id: categories
     attributes:
